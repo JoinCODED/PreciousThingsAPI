@@ -1,9 +1,14 @@
 import time
-from rest_framework.response import Response
+
+from rest_framework.generics import CreateAPIView
 from rest_framework import viewsets, mixins, serializers, permissions
 
 from .models import Thing, PrivateThing
-from .serializers import ThingSerialzer, PrivateThingSerialzer
+from .serializers import ThingSerialzer, PrivateThingSerialzer, UserCreateSerializer
+
+
+class UserCreateAPIView(CreateAPIView):
+    serializer_class = UserCreateSerializer
 
 
 class ThingViewSet(viewsets.ReadOnlyModelViewSet):

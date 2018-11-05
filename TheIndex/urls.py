@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from rest_framework_jwt.views import obtain_jwt_token
 from rest_framework import routers
+
 from things import views
 
 
@@ -32,5 +33,7 @@ router.register(r'private-things', views.PrivateThingViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    path('login/', obtain_jwt_token),
+    path('signup/', views.UserCreateAPIView.as_view())
 ]
