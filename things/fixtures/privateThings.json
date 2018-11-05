@@ -1,0 +1,15 @@
+[
+  { "model": "things.privatething", "pk": 1, "fields": { "name": "gold" } },
+  { "model": "things.privatething", "pk": 2, "fields": { "name": "rubies" } },
+  { "model": "things.privatething", "pk": 3, "fields": { "name": "diamonds" } },
+  {
+    "model": "things.privatething",
+    "pk": 4,
+    "fields": { "name": "amazingly designed macbook cover made by Asis" }
+  },
+  {
+    "model": "things.privatething",
+    "pk": 5,
+    "fields": { "name": "Coded Certificate" }
+  }
+]
