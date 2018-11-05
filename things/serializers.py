@@ -6,11 +6,11 @@ class ThingSerialzer(serializers.ModelSerializer):
 
     class Meta:
         model = Thing
-        exclude = ('created',)
+        fields = "__all__"
 
 
 class PrivateThingSerialzer(serializers.ModelSerializer):
 
     class Meta:
         model = PrivateThing
-        exclude = ('created',)
+        fields = "__all__"
